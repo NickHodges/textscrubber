@@ -38,9 +38,6 @@ type
 
     procedure TestRunOnStartup;
 
-
-
-
   end;
 
 implementation
@@ -123,8 +120,6 @@ begin
     TempReg.Free;
   end;
 end;
-
-
 
 procedure TestTTextScrubber.TestRunOnStartUp;
 var

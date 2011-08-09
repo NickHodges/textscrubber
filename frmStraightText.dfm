@@ -31,7 +31,7 @@ object StraightTextMainForm: TStraightTextMainForm
     Left = 32
     Top = 24
     Bitmap = {
-      494C010110001300200010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010110001300240010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000005000000001002000000000000050
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -720,10 +720,6 @@ object StraightTextMainForm: TStraightTextMainForm
     object AboutAction: TAction
       Caption = 'About...'
       OnExecute = AboutActionExecute
-    end
-    object RunAtStartupAction: TAction
-      Caption = 'Run TextScrubber at Startup'
-      OnExecute = RunAtStartupActionExecute
     end
   end
   object MainPopupMenu: TPopupMenu

@@ -38,7 +38,6 @@ type
     Options1: TMenuItem;
     AboutAction: TAction;
     About1: TMenuItem;
-    RunAtStartupAction: TAction;
     procedure ExitActionExecute(Sender: TObject);
     procedure MainTrayIconClick(Sender: TObject);
     procedure PureTextActionExecute(Sender: TObject);
@@ -52,7 +51,6 @@ type
   private
     { Private declarations }
     TextScrubberOptions: TTextScrubberOptions;
-    // ShouldTrimText: Boolean;
     procedure InitializeMainFormInformation;
     procedure DoStraightenText;
     procedure DoPurifyText;
@@ -127,14 +125,6 @@ begin
   finally
     AboutForm.Free;
   end;
-end;
-
-procedure TStraightTextMainForm.RunAtStartupActionExecute(Sender: TObject);
-begin
-  //  If checked, then add it into startup list
-
-  // if not checked, then remove it
-
 end;
 
 procedure TStraightTextMainForm.DoPurifyText;
