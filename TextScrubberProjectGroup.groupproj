@@ -1,0 +1,50 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{4340bf2c-40b3-4739-9418-55da315dda27}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="TextScrubber.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="Test\TextScrubberTests.dproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<BorlandProject>
+					<Default.Personality/>
+				</BorlandProject>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="TextScrubber">
+			<MSBuild Projects="TextScrubber.dproj"/>
+		</Target>
+		<Target Name="TextScrubber:Clean">
+			<MSBuild Projects="TextScrubber.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TextScrubber:Make">
+			<MSBuild Projects="TextScrubber.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="TextScrubberTests">
+			<MSBuild Projects="Test\TextScrubberTests.dproj"/>
+		</Target>
+		<Target Name="TextScrubberTests:Clean">
+			<MSBuild Projects="Test\TextScrubberTests.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TextScrubberTests:Make">
+			<MSBuild Projects="Test\TextScrubberTests.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="TextScrubber;TextScrubberTests"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="TextScrubber:Clean;TextScrubberTests:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="TextScrubber:Make;TextScrubberTests:Make"/>
+		</Target>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')" Project="$(BDS)\Bin\CodeGear.Group.Targets"/>
+	</Project>

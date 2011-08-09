@@ -1,0 +1,32 @@
+# use regexp syntax.
+syntax: regexp
+(?i)\.local
+(?i)\.bpl
+(?i)\.~*~
+(?i)\.identcache
+(?i)\.dof
+(?i)\.dsk
+(?i)\.bak
+(?i)\.old
+(?i)\.txaPackage
+(?i)\.tvsconfig
+(?i)\.txvpck
+(?i)\.orig
+(?i)\.dcp
+(?i)\.scc
+(?i)\.dcu
+(?i)\.exe
+(?i)\.tpu
+(?i)\.cbk
+(?i)\.ovr
+(?i)\.dcr
+(?i)\.ini
+(?i)\.map
+syntax: glob
+*/_ReSharper.*
+*.ReSharper.user
+*/bin/debug/*
+*/obj/debug/*
+*/obj/x86/Debug/*
+*.suo
+*.pdb
