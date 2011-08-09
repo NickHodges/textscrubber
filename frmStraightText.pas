@@ -101,6 +101,9 @@ begin
   finally
     IniFile.Free;
   end;
+
+  Application.Icon := Self.Icon;
+
 end;
 
 procedure TStraightTextMainForm.DoStraightenText;
