@@ -46,7 +46,6 @@ type
     procedure FormDestroy(Sender: TObject);
     procedure AboutActionExecute(Sender: TObject);
     procedure MainTrayIconAnimate(Sender: TObject);
-    procedure RunAtStartupActionExecute(Sender: TObject);
 
   private
     { Private declarations }
@@ -192,7 +191,7 @@ begin
       TextScrubberOptions.RunOnStartup := OptionsForm.cbRunOnStartup.Checked;
       if TextScrubberOptions.RunOnStartup then
       begin
-        ManageRunOnStartup(cAppTitle, '"' + GetModuleFileNameStr + '"', rtRunAlways);
+        ManageRunOnStartup(cAppTitle, AddQuotes(GetModuleFileNameStr), rtRunAlways);
       end else
       begin
         ManageRunOnStartup(cAppTitle, '', rtRemove);
